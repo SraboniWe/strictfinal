@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "lato", sans-serif;
+    
+}
+header{
+    background-color: #f6f9f9;
+}
+
+.wrapper{
+    width: 80%;
+    margin: auto; 
+}
+.header_wrapper{
+
+display: flex;
+justify-content: space-between;
+padding: 15px 0;
+align-items: center;
+
+}
+.logo{
+width: 20%;
+}
+nav{
+width: 50%;
+}
+nav ul{
+list-style: none;
+display: flex;
+justify-content: end;
+}
+nav ul li{
+margin-left: 50px;
+}
+nav ul li a{
+text-decoration: none;
+text-transform: uppercase;
+color: #2d3950;
+}
+
+
+.banner{
+position: relative;
+}
+
+.banner img{
+width: 100%;
+}
+
+.banner_content{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+}
+
+.banner_content h1{
+color: #ffff;
+font-size: 80px;
+text-transform: uppercase;
+
+}
+
+.banner_content span{
+display: block;
+height: 2px;
+width: 100%;
+background: #15a4fa;
+}
+
+.banner_content p{
+color: #ffff;
+margin: 20px 0 40px;
+}
+
+.banner_content button{
+background: transparent;
+border: 1px solid #15a4fa;
+padding: 10px 20px;
+font-size: 14px;
+text-transform: capitalize;
+border-radius: 3px;
+color: #ffff;
+}
+
+.banner_content button:hover{
+    background-color: #15a4fa;
+    transition: .5s all ease-in-out;
+}
+
+.icon{
+position: absolute;
+color: #ffff;
+bottom: 100px;
+left: 50%;
+transform: translate(-50%, 0px);
+font-size: 20px;
+animation: updown 1s linear infinite alternate;
+}
+
+@keyframes updown {
+    0%{
+        bottom: 100px;
+
+    }
+    
+    100%{
+           bottom: 130px;
+    }
+    
+}
+
+.simple{
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+    
+}
+
+.simple h1{
+text-transform: capitalize;
+font-size: 30px;
+color: #2d3950;
+margin-bottom: 20px;
+
+}
+
+.simple p{
+
+    margin-bottom: 20px;
+    color: #999999;
+
+}
+.features{
+display: flex;
+justify-content: space-between;
+text-align: center;
+}
+.feature_section{
+    padding: 60px 0;
+}
+
+.feature_item{
+width: 30%;
+}
+
+.feature_item h2{
+font-size: 22px;
+font-weight: 600;
+margin-bottom: 10px;
+color: #2d3950;
+}
+
+.feature_item p{
+color: #999999;
+}
+
+.icon_box{
+height: 70px;
+width: 70px;
+color: #ffff;
+ /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#48baff+0,5fc3ff+50,48baff+50,5fc3ff+100 */
+background: linear-gradient(to right,  #48baff 0%,#5fc3ff 50%,#48baff 50%,#5fc3ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+;
+font-size: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
+margin-bottom: 20px;
+}
+
+.works_section{
+background-color: #f9f9f9;
+padding: 60px 0;
+
+}
+
+.works_section h2{
+font-size: 30px;
+text-transform: capitalize;
+font-weight: 600;
+margin-bottom: 10px;
+text-align: center;
+}
+
+.works_section p{
+    text-align: center;
+}
+
+.works{
+margin-top: 50px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.icon_list{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    opacity: 0;
+    transition: .5s all ease-in-out;
+}
+
+.icon_list a {
+    color: #ffff;
+    height: 40px;
+    width: 40px;
+    display: block;
+    border: 1px solid #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 3px;
+
+}
+
+.single_work:hover .icon_list{
+    opacity: 1;
+    top: 50%;
+}
+
+.icon_list a:hover{
+    background-color: #15a4fa;
+    border-color: #15a4fa;
+}
+
+
+
+
+
+
+
+.single_work{
+width: 30%;
+margin-bottom: 30px;
+position: relative;
+overflow: hidden;
+}
+
+.single_work img{
+  width: 100%;
+  display: block;  
+}
+
+.single_work::before{
+    content: '';
+    width: 0%;
+    height: 0%;
+    position: absolute;
+    left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+    background-color: #15a4fa;
+    opacity: 0;
+    transition: .5s all ease-in-out;
+    border-radius: 50%;
+    /* overflow: hidden; */
+}
+
+.single_work:hover::before{
+    opacity: .5;
+    width: 150%;
+    height: 150%;
+    
+}
+
+.contact_section{
+background-image: url(images/f7.png);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+padding: 70px 0;
+position: relative;
+z-index: 0;
+}
+
+.contact_section::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2b374b;
+    opacity: .8;
+    z-index: -1;
+}
+
+
+.contact_wrapper{
+width: 40%;
+margin: auto;
+}
+
+.contact_wrapper h2{
+text-align: center;
+color: #ffff;
+text-transform: capitalize;
+font-size: 30px;
+
+}
+
+.contact_wrapper p{
+    text-align: center;
+    color: #ffff;
+    margin: 10px 0 30px;
+}
+
+form{
+
+}
+
+form input{
+width: 100%;
+background: transparent;
+border: 1px solid #ffff;
+padding: 14px 5px;
+margin-bottom: 15px;
+border-radius: 3px;
+}
+
+form textarea{
+width: 100%;
+background: transparent;
+border: 1px solid #ffff;
+padding: 14px 5px;
+margin-bottom: 15px;
+border-radius: 3px;
+}
+
+.send_row{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.checkbox{
+display: flex;
+align-items: center;
+}
+
+.checkbox input[type='checkbox']{
+ margin: 0;   
+ width: auto;
+ margin-right: 10px;
+}
+
+.checkbox p {
+ margin: 0;   
+}
+
+.send_row input[type='submit']{
+width: auto;
+padding: 10px 25px;
+border: none;
+background-color: #15a4fa;
+color: #ffff;
+margin-bottom: 0;
+margin-top: 15px;
+}
+
+
+
+
+.footer {
+    background: rgb(249, 249, 249);
+    height: 90px;
+    }
+    .footer_main {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    }
+    .copy_right p {
+    color: #999999;
+    }
+    .media {
+    width: 14%;
+    }
+    .media ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    }
+    .media ul li {
+    width: 25px;
+    height: 25px;
+    background: rgb(21, 164, 250);
+    text-align: center;
+    line-height: 35px;
+    border: 3px solid rgb(21, 164, 250);
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s all ease-in-out;
+    margin: 5px;
+        
+    }
+    .media ul li a {
+    color: white;
+    transition: 0.3s all ease-in-out; 
+    display: block;
+    
+    }
+    .media ul li a:hover{
+    color:rgb(21, 164, 250);
+        
+    }
+    .media ul li:hover{
+    background-color:transparent;
+    }
